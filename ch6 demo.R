@@ -48,6 +48,5 @@ coeffs = Fbird.lm$coefficients
 plot(vol,freq, xlab="Vol", ylab="Freq")
 abline(coeffs[1],coeffs[2])
 
-df = data.frame(vol,freq)
 #---------------------------------------------------------------------------------------
 #Multivaraite 
