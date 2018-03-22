@@ -29,11 +29,25 @@ qnorm(p=0.975)*sd(x)/length(x)
 
 #---------------------------------------------------------------------------------------
 #Introduction to R: 
-# 1). help(), built-in functions
+# 1). help(functionName), ?functionName
 # 2). install.packages() and library(), take for example "asbio" and "chemometrics" 
 # 3). ctrl+L or cat('\f')
-# 4). Online-resources: https://www.rdocumentation.org
+# 4). Online-resources: 
+#     https://www.rdocumentation.org
+#     http://www.r-tutor.com/
 Mode(x) # "asbio" function
 
+#---------------------------------------------------------------------------------------
+# Data fitting: lm
+data("Fbird") # dataFrame: vol (x) and freq (y)
+attach(Fbird)
+Fbird.lm <- lm(freq~vol, data=Fbird)
+summary(Fbird.lm)
+
+coeffs = Fbird.lm$coefficients
+plot(vol,freq, xlab="Vol", ylab="Freq")
+abline(coeffs[1],coeffs[2])
+
+df = data.frame(vol,freq)
 #---------------------------------------------------------------------------------------
 #Multivaraite 
