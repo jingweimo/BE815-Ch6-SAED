@@ -1,9 +1,11 @@
 # Table 6.1 dataset
-x<-c(1089,1092,rep(1094,2),rep(1095,4),rep(1098,8),rep(1100,9),rep(1104,12),rep(1105,4),rep(1107,5),rep(1108,5),rep(1110,4),rep(1112,3),rep(1115,2))
+x<-c(1089,1092,rep(1094,2),rep(1095,4),rep(1098,8),rep(1100,9),
+     rep(1104,12),rep(1105,4),rep(1107,5),rep(1108,5),rep(1110,4),
+     rep(1112,3),rep(1115,2))
 
 # histogram visualization: Figure 6.1
 breaks <- seq(1085,1120,5)
-hist(x, breaks = breaks, freq=FALSE, right = FALSE, xlab="Temperature range",ylab="Number of measurements",main="Histogram")
+hist(x, breaks = breaks, freq=TRUE, right = FALSE, xlab="Temperature range",ylab="Number of measurements",main="Histogram")
 # you can a distribution curve 
 #curve(dnorm(x, mean=mean(x), sd=sd(x)), add=TRUE, col="darkblue", lwd=2)  
 
@@ -24,6 +26,7 @@ getmode <- function(v) {
 
 #uncertainty of the mean
 qnorm(p=0.975)*sd(x)/length(x)
+
 #---------------------------------------------------------------------------------------
 #Introduction to R: 
 # 1). help(), built-in functions
@@ -33,5 +36,4 @@ qnorm(p=0.975)*sd(x)/length(x)
 Mode(x) # "asbio" function
 
 #---------------------------------------------------------------------------------------
-
 #Multivaraite 
