@@ -30,7 +30,7 @@ qnorm(p=0.975)*sd(x)/length(x)
 #---------------------------------------------------------------------------------------
 #Introduction to R: 
 # 1). help(), built-in functions
-# 2). install.packages(), take for example "asbio" and "chemometrics" 
+# 2). install.packages() and library(), take for example "asbio" and "chemometrics" 
 # 3). ctrl+L or cat('\f')
 # 4). Online-resources: https://www.rdocumentation.org
 Mode(x) # "asbio" function
