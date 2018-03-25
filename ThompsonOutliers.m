@@ -18,8 +18,9 @@ if N>=3 && N<=40
         ind = find(abs(in-mu)==max(abs(in-mu)),1); %one at a time
         if abs(in(ind)-mu)>tau(N-2)*sd
             out = [out, in(ind)];
+            %updating
             in(ind) = [];
-             N = length(in);
+            N = length(in);
             if N<3
                 break;
             end           
