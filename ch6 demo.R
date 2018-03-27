@@ -35,11 +35,18 @@ qnorm(p=0.975)*sd(x)/length(x)
 # 4). Online-resources: 
 #     https://www.rdocumentation.org
 #     http://www.r-tutor.com/
+#version
+#install.packages("installr")
+#library(installr)
+#updateR()
+#install.packages("asbio")
+#"asbio" has been built in since R3.4
+library("asbio")
 Mode(x) # "asbio" function
 
 #---------------------------------------------------------------------------------------
 # Data fitting: lm
-data("Fbird") # dataFrame: vol (x) and freq (y)
+data("Fbird") # data frame: vol and freq
 attach(Fbird)
 Fbird.lm <- lm(freq~vol, data=Fbird)
 summary(Fbird.lm)
